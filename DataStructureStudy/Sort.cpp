@@ -48,16 +48,35 @@ void selection_sort(data* base, size_t n, compare com)
 	}
 }
 
+template <typename data, typename compare>
+void insertion_sort(data* base, size_t n, compare com)
+{
+	for (size_t i = 1; i < n; i++)
+	{
+		for (size_t j = i; j > 0; j--)
+		{
+			if (com(base[j - 1], base[j]) > 0)
+			{
+				swap(base[j - 1], base[j]);
+			}
+			else
+			{
+				break;
+			}
+		}
+	}
+}
+
 int main()
 {
 	Member* base[Max_DATA];
 	MakeRandomMembers(base, 10);
 	cout << "Before Sorting" << endl;
 	ViewMembers(base, 10);
-	selection_sort(base, 10, CompareByNum);
+	insertion_sort(base, 10, CompareByNum);
 	cout << "After Sorting By Num" << endl;
 	ViewMembers(base, 10);
-	selection_sort(base, 10, CompareByName);
+	insertion_sort(base, 10, CompareByName);
 	cout << "After Sorting By Name" << endl;
 	ViewMembers(base, 10);
 	RemoveMembers(base, 10);
@@ -67,7 +86,7 @@ int main()
 	MakeRandomMembers(base, Max_DATA);
 	cout << "testing test1's number: " << Max_DATA << endl;
 	st = clock();
-	selection_sort(base, Max_DATA, CompareByName);
+	insertion_sort(base, Max_DATA, CompareByName);
 	et = clock();
 	cout << "testing time: " << et - st << endl;
 	RemoveMembers(base, Max_DATA);
@@ -75,7 +94,7 @@ int main()
 	cout << "testing test2's number" << Max_DATA / 10 << endl;
 	st = clock();
 	MakeRandomMembers(base, Max_DATA / 10);
-	selection_sort(base, Max_DATA / 10, CompareByName);
+	insertion_sort(base, Max_DATA / 10, CompareByName);
 	et = clock();
 	cout << "testing time: " << et - st << endl;
 	RemoveMembers(base, Max_DATA / 10);
