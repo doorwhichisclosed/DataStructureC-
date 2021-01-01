@@ -7,6 +7,8 @@ using std::cout;
 using std::cin;
 using std::ostream;
 using std::endl;
+#include <conio.h>
+#include <Windows.h>
 enum keydata
 {
 	NO_DEFINED, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, ESC
@@ -21,6 +23,6 @@ public:
 	static string getstr();
 	static int getkey();
 private:
-	ehglobal(){}
-	~ehglobal(){}
-};
+	ehglobal() {}
+	~ehglobal() {}
+}; 
