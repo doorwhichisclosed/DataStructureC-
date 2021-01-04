@@ -20,7 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common.h" />
-    <ClInclude Include="ehglobal.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sort.cpp">
@@ -33,6 +32,7 @@
     <ProjectGuid>{ac69be23-4c19-45e5-bd0a-7d79d118caac}</ProjectGuid>
     <RootNamespace>DataStructureStudy</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Sort</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -9,6 +9,11 @@ using std::ostream;
 using std::endl;
 #include <conio.h>
 #include <Windows.h>
+#include <vector>
+#include <algorithm>
+using std::vector;
+using std::find;
+using std::find_if;
 enum keydata
 {
 	NO_DEFINED, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, ESC
@@ -26,3 +31,12 @@ private:
 	ehglobal() {}
 	~ehglobal() {}
 }; 
+
+
+
+
+
+
+
+
+

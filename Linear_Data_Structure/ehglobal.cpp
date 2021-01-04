@@ -56,4 +56,3 @@ int ehglobal::getkey()//get keyinfo
 	}
 	return NO_DEFINED;
 }
-
